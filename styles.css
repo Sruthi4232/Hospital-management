@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+body {
+    background-image: url("image1.jpeg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.top-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.logo {
+    width: 100px; 
+}
+
+
+</style>
+</body>
+</html>

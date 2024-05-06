@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Apollo Hospital</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-image: url("image1.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .marquee-images {
+      display: inline-block;
+      animation: marquee-animation 20s linear infinite;
+    }
+
+    @keyframes marquee-animation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 0;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer img {
+      margin: 0 5px;
+    }
+
+    main {
+      margin-bottom: 200px; 
+    }
+
+    .footer-section {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .footer-section .heading {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer-section .div {
+      margin-bottom: 5px;
+    }
+
+    .copyright {
+      flex-basis: 100%;
+      margin-top: 20px;
+    }
+
+    .footer {
+      width: 100%;
+      text-align: center;
+    }
+
+    .footer h1 {
+      margin-bottom: 20px;
+    }
+
+    .footer-section {
+      width: calc(25% - 20px);
+      margin: 0 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .footer-section {
+        width: calc(50% - 20px);
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .top-nav h1 {
+      margin-left: 20px;     }
+
+    .active {
+      background-color: #007bff; 
+      color: white;
+    }
+
+    .contact-content {
+      background-color: #f5f5f5; 
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-content.active {
+      background-color: red; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="logo.png" alt="Apollo Hospital Logo" class="logo">
+      <ul class="top-nav">
+        <h1>Apollo Hospitals</h1>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="appointment.html">Book an Appointment</a></li>
+        <li><a href="Department.html">Departments</a></li>
+        <li><a href="#contact" id="contact-link">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="marquee-container">
+    <div class="marquee-images">
+      <img src="C:\Users\saisr\OneDrive\Desktop\hospital management\img2.jpeg" alt="Image 1">
+      <img src="C:\Users\saisr\OneDrive\Desktop\hospital management\img3.jpeg" alt="Image 2">
+      <img src="C:\Users\saisr\OneDrive\Desktop\hospital management\img4.jpeg" alt="Image 3">
+      <img src="C:\Users\saisr\OneDrive\Desktop\hospital management\img5.jpeg" alt="Image 4">
+      <img src="C:\Users\saisr\OneDrive\Desktop\hospital management\im6.jpeg" alt="Image 5">
+      <img src="C:\Users\saisr\OneDrive\Desktop\hospital management\img7.jpeg" alt="Image 6">
+    </div>
+  </div>
+
+  <main>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+        <p>Get in touch with us to learn more about our services or to book an appointment.</p>
+        <ul>
+          <li>Phone: +91 11 1234 5678</li>
+          <li>Email: <a href="mailto:info@apollohospitals.com">info@apollohospitals.com</a></li>
+          <li>Address: Indraprastha Apollo Hospitals, Sarita Vihar, Delhi Mathura Road, New Delhi - 110076</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <h1> Apollo Hospitals</h1>
+    </div>
+    <div class="footer-section">
+      <div class="heading">Patient care</div>
+      <div class="div">Pay Online</div>
+      <div class="div">Apollo Surgery</div>
+    </div>
+    <div class="footer-section">
+      <div class="heading">New & media</div>
+      <div class="div">News</div>
+      <div class="div">Apollo Hospitals Reviews</div>
+    </div>
+    <div class="footer-section">
+      <div class="heading">Medical procedures</div>
+      <div class="div">Oral & Maxillofacial Surgery</div>
+      <div class="div">Bone Marrow Transplant</div>
+    </div>
+    <div class="footer-section">
+      <div class="heading">Academics and Research</div>
+      <div class="div">Courses</div>
+      <div class="div">Clinical Research</div>
+    </div>
+    <div class="copyright"> Copyright © Apollo Hospitals 2024-25</div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script>
+    const contactLink = document.getElementById('contact-link');
+
+    contactLink.addEventListener('click', () => {
+      contactLink.classList.add('active');
+      const contactContent = document.querySelector('.contact-content');
+      contactContent.classList.add('active');
+    });
+  </script>
+</body>
+</html>
